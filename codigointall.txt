@@ -1,0 +1,2 @@
+npm i  webpack webpack-cli html-webpack-plugin handlebars 
+handlebars-loader image-webpack-loader css-loader mini-css-extract-plugin sass-loader node-sass autoprefixer postcss-loader file-loader  webpack-dev-server rimraf 

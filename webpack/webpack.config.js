@@ -74,7 +74,7 @@ module.exports =
         new htmlWebpackPlugin({
             filename: 'index.html',
             template:'./src/index.handlebars',
-            title: 'My App',
+            title: 'Pagina de Inicio SPK',
             minify: {
                 html5: true,
                 collapseWhitespace: false,
@@ -86,7 +86,7 @@ module.exports =
         }),
         new htmlWebpackPlugin({
             filename: 'factura.html',
-            title: 'My App2',
+            title: 'Pagina Facturacion SPK',
             template:'./src/facturacion.handlebars',
             minify: {
                 html5: true,

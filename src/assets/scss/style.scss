@@ -7,12 +7,14 @@
 @import 'common';
 //extenciones
 @import 'extend';
-// Homepage1
+// configuracion principal
 @import "botones";
 @import "h1-hero";
 @import 'headerMenu';
 @import 'slider_nav';
-
+// pagina inicio
+// pagina facturacion
+@import 'facturador.scss';
 
 @import 'what-we-do';
 @import 'weCreate';

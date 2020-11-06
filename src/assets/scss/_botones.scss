@@ -52,16 +52,3 @@ $coloriver-1-lighter:map-get($derived-1-variants, lighter);
 .derived-2-lighter { background: map-get($derived-2-variants, lighter); }
 .derived-2-darker  { background: map-get($derived-2-variants, darker); }
 
-/* Demo */
-
-html {
-  font-family: sans-serif;  
-}
-
-.box {
-  display: inline-block;
-  height: 50px;
-  width: 100px;
-  padding: 1rem;
-  color: #fff;
-}

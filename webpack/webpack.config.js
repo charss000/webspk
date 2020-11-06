@@ -10,9 +10,10 @@ module.exports =
         path: path.resolve(__dirname, '../dist/'),
         filename: 'assets/js/bundle.js'
     },
+   
     module: {
         rules: [
-            
+          
             {
                 test: /\.handlebars$/, loader: "handlebars-loader" 
             },
@@ -51,7 +52,7 @@ module.exports =
         ]
     },
     plugins: [
-       new  CopyPlugin({
+       /*new  CopyPlugin({
             patterns: Asset.map(asset => {
                 //to: 'dest/[name].[hash].[ext]',
                 return{
@@ -59,20 +60,37 @@ module.exports =
                     to: path.resolve(__dirname,'../dist/assets/[ext]/[name].[ext]')
                 }
             })
-        }),
+        }),*/
         new  CopyPlugin({
             patterns: [
               
                 { from: path.resolve(__dirname,'../src/assets/img'), to: '../dist/assets/img/' },
-                { from: path.resolve(__dirname,'../src/assets/fonts'), to: '../dist/assets/fonts/' }
+                { from: path.resolve(__dirname,'../src/assets/fonts'), to: '../dist/assets/fonts/' },
+                { from: path.resolve(__dirname,'../src/assets/css'), to: '../dist/assets/css/' },
+                { from: path.resolve(__dirname,'../src/assets/js'), to: '../dist/assets/js/' }
               ]
         }),
         
         new htmlWebpackPlugin({
-            template: './src/index.handlebars',
+            filename: 'index.html',
+            template:'./src/index.handlebars',
+            title: 'My App',
             minify: {
                 html5: true,
-                collapseWhitespace: true,
+                collapseWhitespace: false,
+                caseSensitive: true,
+                removeComments: true,
+                removeEmptyElements: true
+            }
+
+        }),
+        new htmlWebpackPlugin({
+            filename: 'factura.html',
+            title: 'My App2',
+            template:'./src/facturacion.handlebars',
+            minify: {
+                html5: true,
+                collapseWhitespace: false,
                 caseSensitive: true,
                 removeComments: true,
                 removeEmptyElements: true

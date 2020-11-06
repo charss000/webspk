@@ -1,0 +1,67 @@
+@function get-lightness-diff($base, $color) {
+    @return lightness($color) - lightness($base);
+}
+
+@function get-variant($color, $diff) {
+    @if ($diff < 0) {
+        @return darken($color, -$diff);
+    } @else {
+        @return lighten($color, $diff);
+    }
+}
+
+@function get-variants($color, $diff) {
+    @return (
+      darker: get-variant($color, -$diff),
+      base: $color,
+      lighter: get-variant($color, $diff)
+    );
+}
+
+@function modify-variants($color, $variants) {
+  $base: map-get($variants, base);  
+  $darker-diff: get-lightness-diff($base, map-get($variants, darker));
+  $lighter-diff: get-lightness-diff($base, map-get($variants, lighter));
+
+    @return (
+      darker: get-variant($color, $darker-diff),
+      base: $color,
+      lighter: get-variant($color, $lighter-diff)
+    );
+}
+
+$original-base:$theme-color;
+$original-variants: get-variants($original-base, 10%);
+
+$derived-1-base:$color-terciario;
+$derived-1-variants: modify-variants($derived-1-base, $original-variants);
+
+$derived-2-base: $color-opcion;
+$derived-2-variants: modify-variants($derived-2-base, $original-variants);
+
+.original-base    { background: map-get($original-variants, base); }
+.original-lighter { background: map-get($original-variants, lighter); }
+.original-darker  { background: map-get($original-variants, darker); }
+
+.derived-1-base    { background: map-get($derived-1-variants, base); }
+.derived-1-lighter { background: map-get($derived-1-variants, lighter); }
+.derived-1-darker  { background: map-get($derived-1-variants, darker); }
+$coloriver-1-darker:map-get($derived-1-variants, darker);
+$coloriver-1-lighter:map-get($derived-1-variants, lighter);
+.derived-2-base    { background: map-get($derived-2-variants, base); }
+.derived-2-lighter { background: map-get($derived-2-variants, lighter); }
+.derived-2-darker  { background: map-get($derived-2-variants, darker); }
+
+/* Demo */
+
+html {
+  font-family: sans-serif;  
+}
+
+.box {
+  display: inline-block;
+  height: 50px;
+  width: 100px;
+  padding: 1rem;
+  color: #fff;
+}

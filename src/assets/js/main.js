@@ -29,10 +29,12 @@
         var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
         doAnimations($firstAnimatingElements);
       });
+      
       BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
         var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
         doAnimations($animatingElements);
       });
+     
       BasicSlider.slick({
         autoplay: true,
         autoplaySpeed: 5000,
@@ -67,6 +69,7 @@
           }
         ]
       });
+      
 
       function doAnimations(elements) {
         var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -132,6 +135,38 @@
         ]
       });
     }
+/*carrucel */
+
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+loop:true,
+  nav:true,
+  //<a href="#" class="genric-btn info radius">Info</a>
+   navText: ['<button type="button"  class="genric-btn info radius"><i class="ti-angle-left"></i></button>','<button type="button"  class="genric-btn info radius"><i class="ti-angle-right"></i></button>'],
+autoplay:true,
+autoplayTimeout:1000,
+autoplayHoverPause:true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    500: {
+      items: 1
+    },
+    200: {
+      items: 1
+    },
+    700: {
+      items: 3
+    },
+    900: {
+      items: 3
+    },
+    1000: {
+      items: 4
+    }
+  }
+})
 
 
 /* 5. Gallery Active */

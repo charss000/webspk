@@ -14,8 +14,13 @@
 @import 'slider_nav';
 // pagina inicio
 // pagina facturacion
-@import 'facturador.scss';
-
+@import 'soluciones';
+@import 'cliente';
+//pagina nosotros
+@import 'nosotros';
+//formularios login ycontacto
+@import 'formulario';
+//
 @import 'what-we-do';
 @import 'weCreate';
 @import 'generating-area';
@@ -35,3 +40,5 @@
 @import 'contact';
 @import 'bradcam';
 @import 'elements';
+
+

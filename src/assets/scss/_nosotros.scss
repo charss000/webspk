@@ -1,0 +1,187 @@
+.nosotros {
+    display: flex;
+    flex-direction: row;
+    align-items:stretch;
+  justify-content: center;
+    @media #{$lg}{
+        flex-direction: row;
+      }
+          @media #{$md}{
+            flex-direction: row;
+      }
+          @media #{$sm}{
+            flex-direction: column;
+      }
+          @media #{$xs}{
+            flex-direction: column;
+      }  
+  }
+  .nosotros-img {
+    background-color: #f1f1f1;
+      display: flex;
+    flex:50%;
+      align-items:center;
+   justify-content:flex-end;
+   order: 1;
+   @media #{$lg}{
+    order: -2;
+  }
+      @media #{$md}{
+        order: -2;
+  }
+      @media #{$sm}{
+        order: -2;
+  }
+      @media #{$xs}{
+        order: -2;
+  } 
+
+
+  }
+  .nosotros-img img {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: auto;
+    
+  }
+  @supports(object-fit: cover){
+    .nosotros-img img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+.nosotros-text{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    padding: 20px;
+      flex: 50%;
+      align-items: center;
+}
+.nosotros-text p {
+    text-align: justify;
+    color: $color-secundario !important;
+}
+.nosotros-text h4 {
+    color: $color-secundario !important;
+}
+  .nosotros-vision{
+    order: 0;
+    background-color: #ededec;
+ 
+  }
+  .nosotros-mision{
+    order: 2;
+    background-color: #fbf1cc;
+    
+@media #{$lg}{
+    order: -1;
+  }
+      @media #{$md}{
+        order: -1;
+  }
+      @media #{$sm}{
+        order: -1;
+  }
+      @media #{$xs}{
+        order: -1;
+  } 
+}
+ //valores
+
+  .valores {
+      display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-areas: "iten1 iten2 iten3"
+     "iten4 iten5 iten6"
+     ;
+      gap: 10px;
+      align-items: stretch;
+      align-self: center;
+      justify-content: space-evenly;
+        
+  
+    @media #{$lg}{
+      
+       
+      }
+          @media #{$md}{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: "iten1 iten2"
+            "iten3 iten4 "
+            "iten6 iten5 "
+            ;
+          
+      }
+          @media #{$sm}{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: "iten1 iten2"
+            "iten3 iten4 "
+            "iten6 iten5 "
+            ;
+          
+      }
+          @media #{$xs}{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-areas: "iten1"
+            "iten2"
+            "iten3"
+            "iten4"
+            "iten6"
+            
+            ;
+      }  
+  }
+  .inten1{
+      grid-area: iten1;
+  }
+  .inten2{
+    grid-area: iten2;
+  }
+  .inten3{
+    grid-area: iten3;
+  }
+  .inten4{
+    grid-area: iten4;
+  }
+  .inten5{
+    grid-area: iten5;
+      background-color: transparent !important;
+  }
+  .inten6{
+    grid-area: iten6;
+  }
+  .cont-valores{
+  width: 100%;
+  display: flex;
+  background-color: #ededec;
+    flex-direction: column;
+ 
+   
+  }
+  
+  .cont-valores-img img {
+    
+    width: 100%;
+    height: auto;
+    
+  }
+  @supports(object-fit: cover){
+    .cont-valores-img img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+  .cont-valores-text{
+      display: flex;
+      flex-direction: column;
+         align-items: center;
+      align-content: center;
+      padding-top: 20px;
+     
+  }
+  .cont-valores-text p, .cont-valores-text h4 {
+    color: $color-secundario !important;
+  }

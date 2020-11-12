@@ -3,6 +3,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin =require ('copy-webpack-plugin');
 const  Asset=require('../assets');
+
 module.exports =
 {
     entry: './src/app.js',
@@ -21,18 +22,20 @@ module.exports =
                 test: /\.(sa|sc|c)ss$/,
                 use: [
                     miniCssExtractPlugin.loader,
-                    'css-loader','sass-loader',
+                    'css-loader?sourceMap','sass-loader?sourceMap',
                 ]
             },
             {
-                test:/\.(jpg|png|gif|jpeg|svg)$/,
+                test:/\.(jpg|png|gif|jpeg|svg|ico)$/,
                 use:[{
-                    loader:'file-loader',
+                  
+                    loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: '/assets/img/',
-                        useRelativePath: true
-                    }
+                        outputPath:'assets/img/',
+                        publicPath:'../img/',
+                        
+                      }
                 }
                     
                 ]
@@ -44,7 +47,8 @@ module.exports =
                     loader: 'file-loader',
                     options: {
                       name: '[name].[ext]',
-                      outputPath: 'fonts/'
+                      outputPath: 'assets/fonts/',
+                      publicPath:'../fonts/',
                     }
                   }
                 ]
@@ -52,7 +56,7 @@ module.exports =
         ]
     },
     plugins: [
-       /*new  CopyPlugin({
+      /* new  CopyPlugin({
             patterns: Asset.map(asset => {
                 //to: 'dest/[name].[hash].[ext]',
                 return{
@@ -64,9 +68,9 @@ module.exports =
         new  CopyPlugin({
             patterns: [
               
-                { from: path.resolve(__dirname,'../src/assets/img'), to: '../dist/assets/img/' },
+             
                 { from: path.resolve(__dirname,'../src/assets/fonts'), to: '../dist/assets/fonts/' },
-                { from: path.resolve(__dirname,'../src/assets/css'), to: '../dist/assets/css/' },
+               { from: path.resolve(__dirname,'../src/assets/css'), to: '../dist/assets/css/' },
                 { from: path.resolve(__dirname,'../src/assets/js'), to: '../dist/assets/js/' }
               ]
         }),
@@ -84,10 +88,12 @@ module.exports =
             }
 
         }),
+        
         new htmlWebpackPlugin({
-            filename: 'factura.html',
-            title: 'Pagina Facturacion SPK',
-            template:'./src/facturacion.handlebars',
+            filename: 'nosotros.html',
+            title: 'Pagina Nosotros SPK',
+            template:'./src/nosotros.handlebars',
+            publicPath:'',
             minify: {
                 html5: true,
                 collapseWhitespace: false,
@@ -97,8 +103,39 @@ module.exports =
             }
 
         }),
+        new htmlWebpackPlugin({
+            filename: 'clientesPse.html',
+            title: 'Pagina Conculta CPE',
+            template:'./src/consultas.handlebars',
+            publicPath:'',
+            minify: {
+                html5: true,
+                collapseWhitespace: false,
+                caseSensitive: true,
+                removeComments: true,
+                removeEmptyElements: true
+            }
+
+        }),
+        new htmlWebpackPlugin({
+            filename: 'inicio.html',
+            title: 'Pagina Conculta CPE',
+            template:'./src/index.html',
+            publicPath:'',
+            minify: {
+                html5: true,
+                collapseWhitespace: false,
+                caseSensitive: true,
+                removeComments: true,
+                removeEmptyElements: true
+            }
+
+        }),
+
         new miniCssExtractPlugin({
-            filename: './assets/css/[name].css'
-        })
+            filename: './assets/css/[name].css',
+            chunkFilename: "[id].css"
+        }),
+
     ]
 }

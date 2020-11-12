@@ -1,0 +1,33 @@
+.page-cliente{
+   background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), #100e17), url(../../assets/img/fondo_page/page.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding: 60px 10px !important;
+  }
+#cont-logos{
+ padding: 50px 0px 50px 0px;
+   
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   text-align: center;
+ 
+}
+
+.logo-cliente{
+    margin: auto;
+    width: 280px;
+    height: 140px;
+    background-color: $theme-color;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+.logo-cliente:hover{
+   background-color: violet;
+}
+.title-cliente {
+text-align: center;
+color:$theme-color !important;
+text-transform: uppercase;
+}

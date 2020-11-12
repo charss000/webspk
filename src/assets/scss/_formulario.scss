@@ -1,0 +1,85 @@
+//login
+.registrar{
+    background-image: radial-gradient(ellipse closest-side, rgba(247, 144, 85, 0.5), #f1c092), url(../../assets/img/formulario/registro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 60px 10px !important
+}
+input[type="text"],input[type="password"],input[type="email"]{
+    font-size: 16px;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    background: none;
+    
+}
+.input-contenedor{
+margin-bottom: 15px;
+border: 1px solid #aaa;
+background: #fff;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+p{
+    text-align: center;
+    color: #fff;
+}
+.link{
+    text-decoration: none;
+    color:#ffc310;
+}
+.link:hover{
+    color: #999;
+}
+
+.contenedor .form .form-header .form-title{
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #ffc310;
+    text-align: center;
+    padding: 14px 0px;
+}
+.contenedor .form .form-header .form-title span {
+    color: #fff;
+    
+}
+.contenedor .form{
+    background:rgba(0, 0, 0, 0.60);
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 3px;
+}
+.contenedor .form  {
+    display: block;
+    color: #ffc310;
+    font-size: 16px;
+    font-family: Roboto;
+    position: relative;
+}
+
+
+.contenedor .form .btn-submit{
+    width: 100%;
+    font-family: Roboto;
+    background: #ffc310;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.contenedor .form .btn-submit:hover{
+    background:none;
+    color: #ffc310;
+    border: 3px solid #ffc310;
+}
+
+

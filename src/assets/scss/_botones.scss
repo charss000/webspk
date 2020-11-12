@@ -32,23 +32,116 @@
 
 $original-base:$theme-color;
 $original-variants: get-variants($original-base, 10%);
+$original-normal:map-get($original-variants, base);
+$original-lighter: map-get($original-variants, lighter);
+$original-darker:map-get($original-variants, darker);
 
 $derived-1-base:$color-terciario;
 $derived-1-variants: modify-variants($derived-1-base, $original-variants);
+$derived-1-normal:map-get($derived-1-variants, base);
+$coloriver-1-darker:map-get($derived-1-variants, darker);
+$coloriver-1-lighter:map-get($derived-1-variants, lighter); 
 
 $derived-2-base: $color-opcion;
 $derived-2-variants: modify-variants($derived-2-base, $original-variants);
 
-.original-base    { background: map-get($original-variants, base); }
-.original-lighter { background: map-get($original-variants, lighter); }
-.original-darker  { background: map-get($original-variants, darker); }
+$cuarto-base:$original-lighter;
+$cuarto-base-variants:get-variants($cuarto-base,35%);
+$cuarto-base-variants2:get-variants($cuarto-base,20%);
+$cuarto-base-lighter:map-get($cuarto-base-variants, lighter);
+$cuarto-base-lighter2:map-get($cuarto-base-variants2, lighter);
+//seccion botones valores
+ .fill:focus,
+ .fill:hover {
+  box-shadow: inset 0 0 0 2em var(--hover)
+}
+ .pulse2:focus,
+ .pulse2:hover {
+  -webkit-animation: pulse 1s;
+  animation: pulse2 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0)
+}
+@-webkit-keyframes pulse2 {
+  0% {
+      box-shadow: 0 0 var(--hover)
+  }
+}
+@keyframes pulse2 {
+  0% {
+      box-shadow: 0 0 var(--hover)
+  }
+}
+ .close2:focus,
+ .close2:hover {
+  box-shadow: inset -10.5em 0 0 0 var(--hover), inset 10.5em 0 0 0 var(--hover)
+}
+.raise:focus,
+.raise:hover {
+  box-shadow: 0 .5em .5em -.4em var(--hover);
+  -webkit-transform: translateY(-.25em);
+  transform: translateY(-.25em)
+}
+.up:focus,
+.up:hover {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover)
+}
+.slide:focus,
+.slide:hover {
+  box-shadow: inset 20.5em 0 0 0 var(--hover)
+}
+.offset {
+  box-shadow: .3em .3em 0 0 var(--color), inset .3em .3em 0 0 var(--color)
+}
+.offset:focus,
+.offset:hover {
+  box-shadow: 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover)
+}
+.fill {
+  --color:#37b3cf;
+  --hover: #37b3cf
+}
+.pulse2 {
+  --color: #60c3d9;
+  --hover: #d17b09
+}
+.close2 {
+  --color: #ff7f82;
+  --hover: #d17b09
+}
+.raise {
+  --color: #ffa260;
+  --hover: #d17b09
+}
+.up {
+  --color: #e4cb58;
+  --hover: #d17b09
+}
+.slide {
+  --color: #8fc866;
+  --hover: #d17b09
+}
+.offset {
+  --color:#8fc866;
+  --hover: #d17b09
+}
+.btn-valor {
+  color: var(--color);
+  transition: .25s
+}
+.btn-valor:focus,
+.btn-valor:hover {
+  border-color: var(--hover);
+  color:#fff;
+}
 
-.derived-1-base    { background: map-get($derived-1-variants, base); }
-.derived-1-lighter { background: map-get($derived-1-variants, lighter); }
-.derived-1-darker  { background: map-get($derived-1-variants, darker); }
-$coloriver-1-darker:map-get($derived-1-variants, darker);
-$coloriver-1-lighter:map-get($derived-1-variants, lighter);
-.derived-2-base    { background: map-get($derived-2-variants, base); }
-.derived-2-lighter { background: map-get($derived-2-variants, lighter); }
-.derived-2-darker  { background: map-get($derived-2-variants, darker); }
+.btn-valor {
+  background: 0 0;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+margin: 0.5em;
+  padding: 1em 2em
+}
+
+
 

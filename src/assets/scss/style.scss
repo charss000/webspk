@@ -1,14 +1,16 @@
 
-
+//@import "custom";
+//@import "~bootstrap/scss/bootstrap";
 @import 'variables';
 @import 'mixins';
 @import 'overlay';
 @import 'color';
+@import "botones";
 @import 'common';
 //extenciones
 @import 'extend';
 // configuracion principal
-@import "botones";
+
 @import "h1-hero";
 @import 'headerMenu';
 @import 'slider_nav';
@@ -21,24 +23,18 @@
 //formularios login ycontacto
 @import 'formulario';
 //
-@import 'what-we-do';
-@import 'weCreate';
-@import 'generating-area';
-@import 'chooseBest';
-@import 'visit-area';
-@import 'tips';
-@import 'haveProject';
 
-@import 'testimonial';
+@import 'weCreate';
 @import 'footer';
 
 // inner Page
 @import 'services';
 
 // Deful Element Page
-@import 'blog_page';
+
 @import 'contact';
 @import 'bradcam';
 @import 'elements';
+
 
 

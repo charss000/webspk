@@ -86,7 +86,7 @@
         position: relative;
         // 
         &::before{
-            /*background-image: url(../img/shape/plus1.png);*/
+            background-image: url(../../assets/img/shape/plus1.png);
             position: absolute;
             content: "";
             top: 0;
@@ -120,7 +120,7 @@
             }
         }  
         &::after{
-            /*background-image: url(../img/shape/plus2.png);*/
+          background-image: url(../../assets/img/shape/plus2.png);
             position: absolute;
             content: "";
             z-index: -1;

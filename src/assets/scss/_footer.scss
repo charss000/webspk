@@ -1,15 +1,21 @@
 .footer-area{
+    padding: 40px 0px 10px 0px;
 
     .footer-logo{
         margin-bottom:30px;
+        display: flex;
+        justify-content: center;
     }
     .footer-pera{
+      
          .info1{
             margin-bottom: 10px;
             line-height: 1.8;
+            color: $color-secundario;
         } .info2{
             margin-bottom: 50px;
             line-height: 1.8;
+            color: $color-secundario;
         }
         &.footer-pera2 p{
             padding: 0;
@@ -69,16 +75,18 @@
         color:  $theme-color;
     }
     .footer-social{
+        display: flex;
+        justify-content: center;
         & a{
             width: 40px;
             height: 40px;
             font-size: 14px;
-            border: 1px solid#fafafa;
-            background:#fafafa;
+            border: 1px solid $color-terciario;
+            background:transparent;
             display: inline-block;
             line-height: 40px;
             text-align: center;
-            color:#949eb2;
+            color:$color-terciario;
             margin-right: 5px;
             @include transition(.4s);
            
@@ -87,7 +95,7 @@
 }
 .footer-social{
    a:hover {
-    background: $theme-color;
+    background: $coloriver-1-darker;
     i{
         color: #fff;
         @include transition(.4s);

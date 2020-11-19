@@ -41,8 +41,8 @@
         dots: false,
         fade: true,
         arrows:true,
-        prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',//<i class="fas fa-angle-right"></i>
-        nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',//<i class="fas fa-angle-right"></i>
+        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
         responsive: [{
             breakpoint: 1024,
             settings: {
@@ -141,28 +141,27 @@ var owl = $('.owl-carousel');
 owl.owlCarousel({
 loop:true,
   nav:true,
-  //<a href="#" class="genric-btn info radius">Info</a>
-   navText: ['<button type="button"  class="genric-btn info radius"><i class="ti-angle-left"></i></button>','<button type="button"  class="genric-btn info radius"><i class="ti-angle-right"></i></button>'],
+ 
+   navText: [
+     '<i class="fas fa-angle-left"></i>',
+     '<i class="fas fa-angle-right"></i>'
+  ],
 autoplay:true,
 autoplayTimeout:1000,
 autoplayHoverPause:true,
+margin: 15,
+
   responsive: {
-    0: {
+    0 : {
       items: 1
     },
-    500: {
-      items: 1
+    768 : {
+      items: 2
     },
-    200: {
-      items: 1
-    },
-    700: {
+    992 : {
       items: 3
     },
-    900: {
-      items: 3
-    },
-    1000: {
+    1200:{
       items: 4
     }
   }
@@ -227,7 +226,8 @@ autoplayHoverPause:true,
       }
     });
 
-
+//ScrollReveal().reveal('.page2');
+//ScrollReveal().reveal('.page3',{delay:500});
 
 /* 8. sildeBar scroll */
     $.scrollUp({

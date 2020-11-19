@@ -1,0 +1,16 @@
+[
+    {"namePage": "consulcliente",
+     "Title": "Pagina consulta cliente", 
+     "Carpeta": "consulta"
+    },
+    {
+    "namePage": "consulfact",
+    "Title": "Pagina consulta factura",
+     "Carpeta": "consulta"
+    },
+    {
+      "namePage": "contactos",
+      "Title": "Pagina Formulario contacto",
+       "Carpeta": "consulta"
+      }
+  ]

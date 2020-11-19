@@ -14,18 +14,7 @@
 
 <body>
 
-    <!-- Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logotipo.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start -->
+   {{>partials/preloader}}
 
     <header>
         <!-- Header Start -->
@@ -60,11 +49,13 @@
          <section class="page-cliente" id="cliente">
              {{> partials/cliente}}        
         </section>
-        <section>
-            
-            {{> partials/consultas/clientesPse}}
+ <section>
+            {{>partials/ventana}}
         </section>
+        
     </main>
+   
+
     <footer>
 
         {{> partials/pie}}
@@ -72,6 +63,8 @@
     </footer>
 
     {{>partials/link/js}}
+      
+   
 
 </body>
 

@@ -1,5 +1,5 @@
 .page-cliente{
-   background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), #100e17), url(../../assets/img/fondo_page/page.png);
+   background-image: radial-gradient(ellipse closest-side,rgba(235, 234, 236, 0.6), #c3c2c5), url(../../assets/img/carrusel/fondo_carrusel.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    padding: 60px 10px !important;
@@ -18,16 +18,21 @@
     margin: auto;
     width: 280px;
     height: 140px;
-    background-color: $theme-color;
+    background-color: rgba($color: $color-secundario, $alpha: 0.4) ;
     display: flex;
     align-items: center;
    justify-content: center;
+   border-radius: 5px;
+   filter: grayscale(80%);
+   transition: filter 1s linear 1s;
+   cursor: pointer;
 }
 .logo-cliente:hover{
-   background-color: violet;
+   background-color: rgba($color: $coloriver-1-darker, $alpha: 0.4) ;
+   filter: grayscale(0%);
 }
 .title-cliente {
 text-align: center;
-color:$theme-color !important;
+color:$color-secundario  !important;
 text-transform: uppercase;
 }

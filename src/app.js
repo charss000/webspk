@@ -1,12 +1,17 @@
 
-require('./assets/scss/style.scss');
-import {showalert} from './js/menu';
+import './assets/scss/style.scss';
 import './assets/img/favicon.png' ;
-import './assets/img/logo/logotipo.png';
+//import './assets/img/logo/logo-07.png';
+//slider
 import './assets/img/slider/1.jpg' ;
 import './assets/img/slider/2.jpg';
 import './assets/img/slider/3.jpg';
+
+//find slider
+//page comercial
 import './assets/img/soluciones/comercial.jpg';
+
+//fin de comercial
 import './assets/img/soluciones/facturador.jpg';
 import './assets/img/soluciones/hoteleria.jpg';
 import './assets/img/soluciones/restobar.jpg';
@@ -17,14 +22,23 @@ import './assets/img/carrusel/pio.png';
 import './assets/img/carrusel/apache.png';
 import './assets/img/carrusel/balcones.png';
 import './assets/img/carrusel/archi.png';
-//libreria adicionales
-//import '../node_modules/@fortawesome/fontawesome-free/css/all.css'; 
-//import '../node_modules/@fortawesome/fontawesome-free/js/all.js'; 
-//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './assets/img/carrusel/one.png';
+import './assets/img/carrusel/2p.png';
+import './assets/img/carrusel/elift.png';
+import './assets/img/carrusel/selva.png';
+import './assets/img/shape/footer_bg.png';
 
-document.getElementById('btn-alert')
-.addEventListener('click',showalert);
-
+//importar iconos
+import './assets/css/fontawesome-all.min.css';
+import './assets/css/themify-icons.css';
+//footer
+import './assets/img/certificado.png';
+import { showalert } from './js/menu';
+//cargar contenido dinamico
+    $(".btn-page").click(function() {
+        var bus= $(this).attr("pagina");
+        showalert(bus);
+      });
 
 
 

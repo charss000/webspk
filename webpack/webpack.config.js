@@ -26,7 +26,7 @@ module.exports =
                 ]
             },
             {
-                test:/\.(jpg|png|gif|jpeg|svg|ico)$/,
+                test:/\.(jpg|png|gif|jpeg|ico)$/,
                 use:[{
                   
                     loader: 'file-loader',
@@ -56,22 +56,24 @@ module.exports =
         ]
     },
     plugins: [
-      /* new  CopyPlugin({
+      new  CopyPlugin({
             patterns: Asset.map(asset => {
-                //to: 'dest/[name].[hash].[ext]',
+                //to: 'dest/[name].[hash].[ext]',./node_modules/
                 return{
-                    from: path.resolve(__dirname, `../${asset}`),
+                    from: path.resolve(__dirname, `${asset}`),
                     to: path.resolve(__dirname,'../dist/assets/[ext]/[name].[ext]')
                 }
             })
-        }),*/
-        new  CopyPlugin({
+        }),
+       new  CopyPlugin({
             patterns: [
               
+                { from: path.resolve(__dirname,'../src/js/data/'), to: '../dist/assets/data/' },
+                { from: path.resolve(__dirname,'../src/partials/consultas/'), to: '../dist/page/' }
              
-                { from: path.resolve(__dirname,'../src/assets/fonts'), to: '../dist/assets/fonts/' },
-               { from: path.resolve(__dirname,'../src/assets/css'), to: '../dist/assets/css/' },
-                { from: path.resolve(__dirname,'../src/assets/js'), to: '../dist/assets/js/' }
+           //  // {from: path.resolve(__dirname,'../src/assets/fonts/'), to: '../dist/assets/fonts/' },
+               //{ from: path.resolve(__dirname,'../src/assets/css'), to: '../dist/assets/css/' },
+               // { from: path.resolve(__dirname,'../src/assets/js'), to: '../dist/assets/js/' }
               ]
         }),
         
@@ -84,8 +86,9 @@ module.exports =
                 collapseWhitespace: false,
                 caseSensitive: true,
                 removeComments: true,
-                removeEmptyElements: true
+                removeEmptyElements: false
             }
+           
 
         }),
         
@@ -99,38 +102,12 @@ module.exports =
                 collapseWhitespace: false,
                 caseSensitive: true,
                 removeComments: true,
-                removeEmptyElements: true
+                removeEmptyElements: false
             }
+            
 
         }),
-        new htmlWebpackPlugin({
-            filename: 'clientesPse.html',
-            title: 'Pagina Conculta CPE',
-            template:'./src/consultas.handlebars',
-            publicPath:'',
-            minify: {
-                html5: true,
-                collapseWhitespace: false,
-                caseSensitive: true,
-                removeComments: true,
-                removeEmptyElements: true
-            }
-
-        }),
-        new htmlWebpackPlugin({
-            filename: 'inicio.html',
-            title: 'Pagina Conculta CPE',
-            template:'./src/index.html',
-            publicPath:'',
-            minify: {
-                html5: true,
-                collapseWhitespace: false,
-                caseSensitive: true,
-                removeComments: true,
-                removeEmptyElements: true
-            }
-
-        }),
+       
 
         new miniCssExtractPlugin({
             filename: './assets/css/[name].css',

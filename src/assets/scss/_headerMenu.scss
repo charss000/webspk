@@ -9,7 +9,7 @@
 }
 // Header Bottom
 .main-header{
-    background-color:$fondo-menu;
+    background-color:rgba($fondo-menu,0.9);
     // position: relative;
     z-index: 3;
     // header smoll device padding
@@ -49,6 +49,11 @@
                 &:hover{
                     & > a{
                         color:$theme-color;
+                    }
+                }
+                &:active{
+                    & > a{
+                        color:$theme-color !important;
                     }
                 }
             }

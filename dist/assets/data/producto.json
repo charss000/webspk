@@ -1,0 +1,90 @@
+[
+    {
+       "codProducto":"SpkCOM01",
+       "detalle":"Punto de venta ",
+       "PrecioDolar":185,
+       "precioSoles":"" ,
+       "precioAlquiler":19.9,
+       "cps":9.9,
+       "cantCp":250,
+       "hosting":11.8,
+       "plazo":12
+    },
+    {
+        "codProducto":"SpkCOM02",
+        "detalle":"Punto de venta + control caja efectivo + control de otros medios de pago",
+        "PrecioDolar":300,
+        "precioSoles":"" ,
+        "precioAlquiler":24.9,
+        "cps":9.9,
+        "cantCp":250,
+        "hosting":9.9,
+        "plazo":12
+     },
+     {
+        "codProducto":"SpkCOM03",
+        "detalle":"Punto de venta + control de inventario + control de caja efectivo + control de otros medios de pago ",
+        "PrecioDolar":400,
+        "precioSoles":"",
+        "precioAlquiler":34.9,
+        "cps":9.9,
+        "cantCp":500,
+        "hosting":9.9,
+        "plazo":12
+     },
+     {
+        "codProducto":"SpkCOM04",
+        "detalle":"Punto de venta + control de inventario + control de caja efectivo + control de otros medios de pago ",
+        "PrecioDolar":800,
+        "precioSoles":"" ,
+        "precioAlquiler":49.9,
+        "cps":19.9,
+        "cantCp":500,
+        "hosting":9.9,
+        "plazo":12
+     },
+     {
+        "codProducto":"SpkCOM05",
+        "detalle":"Punto de venta + control de inventario + Transferencia entre almacenes + control de caja efectivo + control de otros medios de pago",
+        "PrecioDolar":1350,
+        "precioSoles":"" ,
+        "precioAlquiler":69.9,
+        "cps":19.9,
+        "cantCp":2000,
+        "hosting":39.9,
+        "plazo":12
+     },
+     {
+        "codProducto":"SpkCOM06",
+        "detalle":"Solución comercial:  Punto de venta + control de inventario + transferencia entre almacenes + control de caja efectivo + control de otros medios de pago + Anticipos Recibidos + compensaciones + cuenta por cobrar.",
+        "PrecioDolar":3500,
+        "precioSoles":"" ,
+        "precioAlquiler":258.9,
+        "cps":39.9,
+        "cantCp":2000,
+        "hosting":49.9,
+        "plazo":12
+     },
+     {
+        "codProducto":"SpkCOM07",
+        "detalle":"Solución comercial:  Punto de venta + control de inventario + transferencia entre almacenes + control de caja efectivo + control de otros medios de pago + Anticipos Otorgados + compensaciones + cuenta por pagar.",
+        "PrecioDolar":3500,
+        "precioSoles":"" ,
+        "precioAlquiler":258.9,
+        "cps":39.9,
+        "cantCp":2000,
+        "hosting":49.90,
+        "plazo":12
+     },
+     {
+        "codProducto":"SpkCOM08",
+        "detalle":"Solución comercial:  Punto de venta + control de inventario + transferencia entre almacenes + control de caja efectivo + control de otros medios de pago + Anticipos Recibidos y Otorgados + compensaciones + cuentas por cobrar y cuentas por pagar. ",
+        "PrecioDolar":6000,
+        "precioSoles":"" ,
+        "precioAlquiler":428,
+        "cps":39.9,
+        "cantCp":5000,
+        "hosting":69.9,
+        "plazo":12
+     }
+]

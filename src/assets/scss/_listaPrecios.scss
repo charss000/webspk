@@ -1,0 +1,280 @@
+$borde:2px solid $coloriver-1-darker;
+.page-productos{
+    background-image: radial-gradient(ellipse closest-side,rgba(255, 255, 255, 0.6), #f7fbfd), url(../../assets/img/carrusel/fondo_carrusel.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 10px !important;
+   }
+
+.cont-titulo,.cont-descripcion{
+    display: grid;
+    grid-template-columns: repeat(9,1fr) ;
+      grid-template-areas: "tituproduct tituproduct  tituproduct tituproduct   titualquiler titualquiler titualquiler titualquiler  titucantidad  ";
+   
+  
+    @media #{$lg}{
+       grid-template-areas: "tituproduct tituproduct  tituproduct tituproduct   verdetalle ";
+       grid-template-columns: repeat(5,1fr);
+        }
+            @media #{$md}{
+                grid-template-areas: "tituproduct tituproduct  tituproduct tituproduct    verdetalle ";
+                grid-template-columns: repeat(5,1fr);
+        }
+            @media #{$sm}{
+                grid-template-areas: "tituproduct tituproduct  tituproduct tituproduct    verdetalle ";
+                grid-template-columns: repeat(5,1fr);
+        }
+            @media #{$xs}{
+                grid-template-areas: "tituproduct tituproduct  tituproduct tituproduct   verdetalle ";
+                grid-template-columns: repeat(5,1fr);
+//color: #3ec1d5;
+        } 
+}
+.cont-alquiler-descripcion{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+}
+.titulo-productos{
+    grid-area: tituproduct;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+   
+   
+}
+.verdetalle{
+    grid-area: verdetalle;
+    display: none;
+    @media #{$lg}{
+        display: block;
+        }
+            @media #{$md}{
+                display: block;
+        }
+            @media #{$sm}{
+                display: block;
+        }
+            @media #{$xs}{
+                display: block;
+        } 
+}
+.titulo-alquiler{
+    grid-area: titualquiler;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas:
+     "header header header header header";
+     @media #{$lg}{
+      display: none;
+      }
+          @media #{$md}{
+            display: none;
+      }
+          @media #{$sm}{
+            display: none;
+      }
+          @media #{$xs}{
+            display: none;
+      } 
+  
+}
+.titulo-alquiler2{
+  
+       display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas:
+     "header header header header header";
+}
+.titulo-cantidad{
+    grid-area: titucantidad;
+    display: grid;
+    @media #{$lg}{
+        display: none;
+        }
+            @media #{$md}{
+              display: none;
+        }
+            @media #{$sm}{
+              display: none;
+        }
+            @media #{$xs}{
+              display: none;
+        } 
+  
+}
+.titulo-cantidad>.titleitem,.titulo-alquiler-header >.titleitem{
+    padding: 0px 8px;
+}
+.titulo-alquiler-header{
+    grid-area: header;
+   
+}
+.titleitem{
+  border-top: $borde;
+  border-left: $borde;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: #defdff;
+   @media #{$sm}{
+    font-size: 10px;
+}
+  @media #{$xs}{
+    font-size: 10px;
+} 
+  
+}
+.titulo-alquiler2> .titleitem:last-child{
+    border-right: $borde;
+}
+.titulo-alquiler2 > .titulo-alquiler-header >  .titleitem{
+    border-right: $borde;
+}
+.right{
+    justify-content: space-between !important;
+}
+.icomTable{
+   opacity: 0.8;
+}
+.link{
+ width: 100% !important;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 5px;
+}
+.link i{
+  color: #012f5f;
+  
+   }
+.ico-ver{
+    color: #012f5f; 
+}
+.itemDes{
+   border-left: $borde;
+   border-bottom: $borde;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+    @media #{$sm}{
+      
+        font-size: 11px;
+  }
+      @media #{$xs}{
+        
+        font-size: 11px;
+  } 
+}
+.cont-alquiler-descripcion >.itemDes{
+    border-top: $borde;
+}
+.cont-alquiler-descripcion >.itemDes:last-child{
+    border-right: $borde;
+}
+.cont-descripcion > div:nth-child(5),.cont-descripcion > div:nth-child(6),
+.cont-descripcion > div:nth-child(7),.cont-descripcion > div:nth-child(8)
+,.cont-descripcion > div:nth-child(9)
+{
+    @media #{$lg}{
+        display: none;
+        }
+            @media #{$md}{
+              display: none;
+        }
+            @media #{$sm}{
+              display: none;
+        }
+            @media #{$xs}{
+              display: none;
+        } 
+}
+.cont-descripcion > div:nth-child(10){
+display: none;
+@media #{$lg}{
+    display: block;
+    border-right: $borde;
+    }
+        @media #{$md}{
+          display: block;
+          border-right: $borde;
+    }
+        @media #{$sm}{
+          display: block;
+          border-right: $borde;
+    }
+        @media #{$xs}{
+          display: block;
+          border-right: $borde;
+    } 
+}
+.cont-descripcion > div:nth-child(9){
+    border-right: $borde;
+}
+.cont-descripcion:nth-child(even) {
+    background-color: #fff;
+}
+
+.cont-descripcion:nth-child(odd) {
+    background-color: #f0fbfc;
+}
+.titulo-cantidad > div:last-child,.verdetalle > div:last-child{
+    border-right: $borde;
+}
+.datos-table > div:nth-child(2){
+   border-top: $borde;
+}
+.tooltip-container {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    opacity: 0;
+    z-index: 99;
+    color: #fff;
+    width: 190px;
+    display: block;
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #111;
+    background-color: rgba($color:$color-secundario, $alpha: 0.9);
+    border:2px solid $color-secundario ;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    position: absolute;
+    right: -80px;
+    bottom: 40px;
+}
+
+.tooltip:before,.tooltip:after {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba($color: $color-secundario, $alpha: 0.9);
+    position: absolute;
+    bottom: -10px;
+    left: 47%;
+}
+
+.tooltip-container:hover .tooltip,a:hover .tooltip {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}

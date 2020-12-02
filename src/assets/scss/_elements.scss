@@ -1037,6 +1037,7 @@ del {
                 &.selected {
                     color: $primary;
                     background: transparent;
+                    border: none !important;
                 }
                 &:hover {
                     color: $primary;

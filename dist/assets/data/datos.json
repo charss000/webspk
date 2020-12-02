@@ -1,16 +1,27 @@
 [
-    {"namePage": "consulcliente",
-     "Title": "Pagina consulta cliente", 
-     "Carpeta": "consulta"
-    },
-    {
+  {
+    "namePage": "consulcliente",
+    "Title": "Pagina consulta cliente",
+    "Carpeta": "consulta"
+  },
+  {
     "namePage": "consulfact",
     "Title": "Pagina consulta factura",
-     "Carpeta": "consulta"
-    },
-    {
-      "namePage": "contactos",
-      "Title": "Pagina Formulario contacto",
-       "Carpeta": "consulta"
-      }
-  ]
+    "Carpeta": "consulta"
+  },
+  {
+    "namePage": "contactos",
+    "Title": "Pagina Formulario contacto",
+    "Carpeta": "consulta"
+  },
+  {
+    "namePage": "iniciosecion",
+    "Title": "Pagina de prueba",
+    "Carpeta": "consulta"
+  },
+  {
+    "namePage": "listaprecios",
+    "Title": "Precios de Productos spk 2",
+    "Carpeta": "consulta"
+  }
+]

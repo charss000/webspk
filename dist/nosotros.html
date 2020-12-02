@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/flaticon.css">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./assets/css/magnific-popup.css">
     <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     
     
     
@@ -92,16 +93,18 @@
                                                 <li><a href="index.html?#cliente">CLIENTES</a></li>
                                                 <li><a href="#">CONSULTAS CPE</a>
                                                     <ul class="submenu">
-                                                        <li><a href="#" class="btn-page" pagina="consulcliente">CLIENTES PSE</a></li>
-                                                        <li><a href="#" class="btn-page" pagina="consulfact">CONSULTA  DE </a></li>
-                                                        
+                                                        <li><a href="#" class="btn-page" pagina="consulcliente" modal="mainmodal">CLIENTES PSE</a></li>
+                                                        <li><a href="#" class="btn-page" pagina="consulfact" modal="mainmodal">CONSULTA  DE FACTURADOR </a></li>
+                                                        <li><a href="productos.html?#" class="cargatable">LISTA DE PRODUCTOS</a></li>
+                                                     
                                                     </ul>
                                                 </li>
-                                                <li><a href="nosotros.html">QUIENES SOMOS</a>
+                                                <li><a href="#">QUIENES SOMOS</a>
                                                     <ul class="submenu">
-                                                        <li><a href="#">VISION</a></li>
-                                                        <li><a href="#">MISION</a></li>
-                                                        <li><a href="#">VALORES</a></li>
+                                                        <li><a href="nosotros.html">VISION</a></li>
+                                                        <li><a href="nosotros.html">MISION</a></li>
+                                                        <li><a href="nosotros.html">VALORES</a></li>
+                                                       
                                                     </ul>
                                                 </li>
         
@@ -141,7 +144,7 @@
     <div class="nosotros">
       <div class="nosotros-img">
 
-        <img src="assets/img/facturador.jpg" alt="">
+        <img src="assets/img/vision.jpg" alt="">
       </div>
       <div class="nosotros-text nosotros-mision">
         <h4> VISIÓN </h4>
@@ -159,7 +162,7 @@
     <div class="nosotros">
       <div class="nosotros-img">
 
-        <img src="assets/img/facturador.jpg" alt="">
+        <img src="assets/img/mision.jpg" alt="">
       </div>
       <div class="nosotros-text nosotros-vision">
         <h4>MISIÓN
@@ -190,7 +193,7 @@
             <div class="cont-valores inten1">
                 <div class="cont-valores-img">
 
-                    <img src="assets/img/facturador.jpg" alt="">
+                    <img src="assets/img/compromiso.jpg" alt="">
                 </div>
                 <div class="cont-valores-text">
                     <h4> COMPROMISO </h4>
@@ -206,7 +209,7 @@
             <div class="cont-valores inten2">
                 <div class="cont-valores-img">
 
-                    <img src="assets/img/facturador.jpg" alt="">
+                    <img src="assets/img/equipo.jpg" alt="">
                 </div>
                 <div class="cont-valores-text">
 
@@ -223,7 +226,7 @@
             <div class="cont-valores inten3">
                 <div class="cont-valores-img">
 
-                    <img src="assets/img/facturador.jpg" alt="">
+                    <img src="assets/img/integridad.jpg" alt="">
                 </div>
                 <div class="cont-valores-text">
 
@@ -242,7 +245,7 @@
             <div class="cont-valores inten4">
                 <div class="cont-valores-img">
 
-                    <img src="assets/img/facturador.jpg" alt="">
+                    <img src="assets/img/transparencia.jpg" alt="">
                 </div>
                 <div class="cont-valores-text">
 
@@ -259,13 +262,11 @@
 
 
             </div>
-            <div class="cont-valores inten5">
-
-            </div>
+           
             <div class="cont-valores inten6">
                 <div class="cont-valores-img">
 
-                    <img src="assets/img/facturador.jpg" alt="">
+                    <img src="assets/img/innovacion.jpg" alt="">
                 </div>
                 <div class="cont-valores-text">
 
@@ -287,25 +288,47 @@
            
 
         <section>
-             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding: 0%;">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>        </section>
+            <div class="modal fade" id="mainmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            	<div class="modal-dialog" role="document">
+            		<div class="modal-content">
+            			<div class="modal-header">
+            				<h5 class="modal-title">Modal title</h5>
+            				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            					<span aria-hidden="true">&times;</span>
+            				</button>
+            			</div>
+            			<div class="cont-modal">
+            
+            			</div>
+            
+            		</div>
+            	</div>
+            </div>
+            <div class="modal fade" id="modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            	<div class="modal-dialog modal-lg" role="document">
+            		<div class="modal-content">
+            			<div class="modal-header">
+            				<h5 class="modal-title">Modal title</h5>
+            				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            					<span aria-hidden="true">&times;</span>
+            				</button>
+            			</div>
+            			<div class="cont-modal">
+            
+            			</div>
+            	<div class="modal-footer d-flex justify-content-between align-items-left">
+            				<button type="button" class="btn btn-default" data-dismiss="modal">
+            					Cerrar
+            				</button>
+            
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            
+            
+            
+        </section>
   
   
       
@@ -318,10 +341,10 @@
         <div class="footer-main" data-background="assets/img/footer_bg.png">
             <div class="footer-area">
                 <div class="container">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-md-3">
-                            <div class="single-footer-caption mb-50">
-                                <div class="single-footer-caption mb-30">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="single-footer-caption">
+                                <div class="single-footer-caption">
                                     
                                     <div class="footer-logo">
                                         <a href="index.html">  <h5><span style="color:#FFD100">Spk</span>Tecnología</h5></a>
@@ -329,24 +352,19 @@
                                     <div class="footer-tittle">
                                         <div class="footer-pera">
                                             <p class="info1">Con más de 10 años brindando soluciones informáticas.</p>
-                                            <p class="info2">Horario de Trabnajo: 9am-5pm</p>
+                                            <p class="info2">Horario de Trabajo: 9am-5pm</p>
                                         </div>
                                     </div>
-                                    <div class="footer-social">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fas fa-globe"></i></a>
-                                        <a href="#"><i class="fab fa-behance"></i></a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="single-footer-caption">
                                 <div class="footer-tittle">
-                                    <h5>OFICINAS</h5>
-                                    <ul>
+                                    <h5 class="text-center">OFICINAS</h5>
+                                    <ul class="text-center">
                                         <li>Jr. General Cordova Nro. 1021 - Jesus Maria - Lima</li>
                                         <li>Jr. 28 de julio Nro. 602 - Huancayo - Junin</li>
                                         <li>Tel: 964939685</li>
@@ -356,12 +374,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
+                        <div class="col-md-4">
+                            <div class="single-footer-caption">
+                                <div class="footer-tittle text-center">
                                     <h5>CERTIFICADO POR SUNAT </h5>
                                    <img src="assets/img/certificado.png" alt="">
                                 </div>
+                                <br>
+                                <div class="footer-social">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fas fa-globe"></i></a>
+                                        <a href="#"><i class="fab fa-behance"></i></a>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -371,17 +396,18 @@
             <div class="footer-bottom-area footer-bg">
                 <div class="container">
                     <div class="footer-border">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-xl-12">
+                        <div class="row d-flex align-items-center justify-content-center">
+                            
                                 <div class="footer-copy-right text-center">
-                                    <p>
-                                        
-                                        Copyright &copy;
-                                        <script>document.write(new Date().getFullYear());</script> Todos los derechos reservado a  <a href="index.html">  <h5><span style="color:#FFD100">Spk</span>Tecnología</h5></a>
-                                        
-                                    </p>
+                                    <p class="text-center">
+                                      
+                                        <script>document.write(new Date().getFullYear());</script> 
+                                        Todos los derechos reservado a  
+                                        </p><h5><span style="color:#FFD100">Spk</span>Tecnología</h5>
+                                      
+                                    <p></p>
                                 </div>
-                            </div>
+                          
                         </div>
                     </div>
                 </div>

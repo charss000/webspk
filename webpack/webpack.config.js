@@ -107,8 +107,23 @@ module.exports =
             
 
         }),
-       
+                
+        new htmlWebpackPlugin({
+            filename: 'productos.html',
+            title: 'Pagina productos tecnologicos SPK',
+            template:'./src/productos.handlebars',
+            publicPath:'',
+            minify: {
+                html5: true,
+                collapseWhitespace: false,
+                caseSensitive: true,
+                removeComments: true,
+                removeEmptyElements: false
+            }
+            
 
+        }),
+        
         new miniCssExtractPlugin({
             filename: './assets/css/[name].css',
             chunkFilename: "[id].css"

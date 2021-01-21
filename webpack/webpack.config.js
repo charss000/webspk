@@ -3,12 +3,14 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin =require ('copy-webpack-plugin');
 const  Asset=require('../assets');
-
+//../../web-core/webspk/webspk/wwwroot/
+//'../dist/'
+const url='../dist/';
 module.exports =
 {
     entry: './src/app.js',
     output: {
-        path: path.resolve(__dirname, '../dist/'),
+        path: path.resolve(__dirname, url),
         filename: 'assets/js/bundle.js'
     },
    
@@ -23,10 +25,11 @@ module.exports =
                 use: [
                     miniCssExtractPlugin.loader,
                     'css-loader?sourceMap','sass-loader?sourceMap',
+                
                 ]
             },
             {
-                test:/\.(jpg|png|gif|jpeg|ico)$/,
+                test:/\.(jpg|png|gif|jpeg|ico|webp)$/,
                 use:[{
                   
                     loader: 'file-loader',
@@ -69,7 +72,8 @@ module.exports =
             patterns: [
               
                 { from: path.resolve(__dirname,'../src/js/data/'), to: '../dist/assets/data/' },
-                { from: path.resolve(__dirname,'../src/partials/consultas/'), to: '../dist/page/' }
+                { from: path.resolve(__dirname,'../src/cont/'), to: '../dist/cont/' }
+               // { from: path.resolve(__dirname,'../src/partials/consultas/'), to: '../dist/page/' }
              
            //  // {from: path.resolve(__dirname,'../src/assets/fonts/'), to: '../dist/assets/fonts/' },
                //{ from: path.resolve(__dirname,'../src/assets/css'), to: '../dist/assets/css/' },
@@ -91,12 +95,10 @@ module.exports =
            
 
         }),
-        
         new htmlWebpackPlugin({
-            filename: 'nosotros.html',
-            title: 'Pagina Nosotros SPK',
-            template:'./src/nosotros.handlebars',
-            publicPath:'',
+            filename: 'tienda.html',
+            template:'./src/tienda.handlebars',
+            title: 'Pagina de tienda',
             minify: {
                 html5: true,
                 collapseWhitespace: false,
@@ -104,15 +106,14 @@ module.exports =
                 removeComments: true,
                 removeEmptyElements: false
             }
-            
+           
 
-        }),
-                
+        }),   
+        
         new htmlWebpackPlugin({
-            filename: 'productos.html',
-            title: 'Pagina productos tecnologicos SPK',
-            template:'./src/productos.handlebars',
-            publicPath:'',
+            filename: 'empresas.html',
+            template:'./src/empresas.handlebars',
+            title: 'Pagina de empresas',
             minify: {
                 html5: true,
                 collapseWhitespace: false,
@@ -120,10 +121,9 @@ module.exports =
                 removeComments: true,
                 removeEmptyElements: false
             }
-            
+           
 
-        }),
-        
+        }),            
         new miniCssExtractPlugin({
             filename: './assets/css/[name].css',
             chunkFilename: "[id].css"

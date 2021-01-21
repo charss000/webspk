@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^5.0.0-beta1",
     "css-loader": "^5.0.0",
     "file-loader": "^6.2.0",
     "handlebars": "^4.7.6",

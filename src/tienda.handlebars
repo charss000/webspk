@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{htmlWebpackPlugin.options.title}}</title>
+       {{>partials/link/css}}
+</head>
+<body id="body">
+
+    {{>partials/layout/preloader}}
+
+    <header>
+        <!-- Header Start -->
+        {{> partials/layout/header}}
+        <!-- Header End -->
+    </header>
+
+    <main >
+        <div class="container">
+          
+                <section class="promotional-banners">
+
+                    {{> partials/pages/tienda/carrucel}}
+
+
+                </section>
+                <section  class="cont-tienda" >
+
+                    {{> partials/pages/tienda/filtroGalery}}
+
+
+                </section>
+        
+
+        </div>
+    </main>
+    <section>
+
+        {{>partials/layout/modal}}
+    </section>
+
+    <footer>
+
+        {{> partials/layout/pie}} 
+
+    </footer>
+
+    {{>partials/link/js}}
+
+
+
+</body>
+</html>

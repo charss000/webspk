@@ -1,0 +1,87 @@
+
+.with-margin {
+    margin-top: 100px;
+}
+.home-badges-card {
+    padding: 0;
+    width: 90%;
+    margin: auto;
+}
+.with-margin .items-app {
+    padding-bottom: 80px;
+   .items, .items .item{
+        display: flex;
+        flex-direction: row;
+       justify-content: center;
+       align-items: stretch;
+       margin-bottom: 50px;
+    }
+    .items .item .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+      padding: 10px;
+     
+        border-radius: 6.7px;
+        box-shadow: 0 6px 10px 0 rgba(128,98,96,.16);
+        margin: 5px;
+        i{
+            font-size:45px;
+           color: $theme-color;
+           width: 50px !important;
+           text-align: center;
+        }
+      
+    }
+}
+
+
+
+
+.items .item .description {
+    padding-left: 20px;
+    max-width: 270px;
+       display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.download-card {
+    margin-bottom: 114px;
+  display: flex;
+}
+.download-card-content {
+    width: 100%;
+    border-radius: 15px;
+    background-color: #fff;
+    height: 21em;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+    box-shadow: 0 6px 10px 0 rgba(128, 98, 96, 0.16);
+    .effect {
+        min-width: 580px;
+        max-width: 600px;
+        position: relative;
+        top: -100px;
+    }
+}
+.download-card-content .info {
+    padding: 50px 50px 0;
+}
+
+.download-card-content .effect {
+   width: 100%;
+}
+.download-card-content .info .redirects .redirect-download .ios-img {
+    max-width: 127px;
+}
+.download-card-content .info .redirects .redirect-download .android-img{
+    max-width: 147px;
+}
+img {
+    max-width: 100%;
+   
+}

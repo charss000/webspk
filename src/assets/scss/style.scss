@@ -7,35 +7,14 @@
 @import 'color';
 @import "botones";
 @import 'common';
+@import 'modal';
 //extenciones
 @import 'extend';
 // configuracion principal
-
-@import "h1-hero";
 @import 'headerMenu';
-@import 'slider_nav';
-// pagina inicio
-// pagina facturacion
-@import 'soluciones';
-@import 'cliente';
-//pagina nosotros
-@import 'nosotros';
-//pagina listPrecios
-@import 'listaPrecios';
-@import 'weCreate';
+//pagina Inicio
+@import 'inicio/index';
+//pagna tienda
+@import 'tienda/index';
+//footer
 @import 'footer';
-
-// inner Page
-@import 'services';
-
-// Deful Element Page
-
-@import 'contact';
-@import 'bradcam';
-@import 'elements';
-//formularios login ycontacto
-@import 'formulario';
-//
-
-
-

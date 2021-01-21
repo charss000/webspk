@@ -1,75 +1,64 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{htmlWebpackPlugin.options.title}}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    {{>partials/link/css}}
-
+       {{>partials/link/css}}
 </head>
+<body id="body">
 
-<body>
-
-   {{>partials/preloader}}
+    {{>partials/layout/preloader}}
 
     <header>
         <!-- Header Start -->
-        {{> partials/navigation}}
+        {{> partials/layout/header}}
         <!-- Header End -->
     </header>
 
-    <main data-spy="scroll" data-target="#navigation">
+    <main >
+        <div class="container">
+          
+                <section>
 
-        <!-- Slider Area Start-->
-        <div class="slider-area "  id="inicio">
-            {{> partials/slider}}
-        </div>
+                    {{> partials/pages/inicio/baner}}
 
 
+                </section>
+                <section>
 
-        <!-- Slider Area End-->
-        <!-- What We do start-->
+                    {{> partials/pages/inicio/tiendas}}
 
-        <section class="page2" id="facturacion" >  
-     
-         {{> partials/soluciones/facturacion}}         
-        </section>
-           
 
-        <section class="page3" id="comercial">
-             {{> partials/soluciones/comercial}}        
-        </section>
-         <section class="page4" id="transporte">
-             {{> partials/soluciones/transporte}}        
-        </section>
-         <section class="page-cliente" id="cliente">
-             {{> partials/cliente}}        
-        </section>
-      
- <section>
-            {{>partials/ventana}}
-        </section>
+                </section>
+                <section>
+
+                    {{> partials/pages/inicio/marketing}}
+
+                </section>
+
+                <section>
+                    {{>partials/pages/inicio/fac}}
+                </section>
         
-    
 
-
+        </div>
     </main>
-   
+    <section>
+
+        {{>partials/layout/modal}}
+    </section>
 
     <footer>
 
-        {{> partials/pie}}
+        {{> partials/layout/pie}} 
 
     </footer>
 
     {{>partials/link/js}}
-      
-   
+
+
 
 </body>
-
 </html>
+

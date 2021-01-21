@@ -1,0 +1,86 @@
+.faq-container {
+    width: 100%;
+    background: rgba(184,180,180,.25);
+    padding: 80px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    .faq-head {
+        width: 50% !important;
+        .secondary-title {
+            text-transform: uppercase;
+            color: #706967;
+            font-size: 16px;
+            font-family: Poppins-SemiBold,Helvetica,Arial,sans-serif;
+        }
+        .faq-container .faq-head .primary-title {
+            font-size: 40px;
+            font-family: Poppins-SemiBold,Helvetica,Arial,sans-serif;
+            color: #332927;
+        }
+    }
+    .faq-description {
+        width: 50%;
+        .faq-description {
+            color: #706967;
+            font-size: 18px;
+          
+        }
+      
+    }
+}
+
+.badges-card-container {
+    width: 80%;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 6px 10px 0 rgba(128, 98, 96, 0.16);
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title, .title.stores-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.title {
+    font-family: Poppins-SemiBold,Helvetica,Arial,sans-serif;
+    color: #332927;
+}
+.badge-row .badge {
+    margin-right: 5px;
+}
+.badge-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.badge {
+    margin-top: 20px;
+    height: 32px;
+    border: 2px solid #efece9;
+    border-radius: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #fff;
+    font-family: Poppins-Regular,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #b8b4b4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.badge:hover{
+    color: #b8b4b4;  
+}

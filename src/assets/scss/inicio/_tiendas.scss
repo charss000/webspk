@@ -1,0 +1,129 @@
+.cpgs-container {
+    display: flex;
+    align-items: stretch;
+       flex-direction: column;
+    margin-bottom: 50px;
+    width: 100% !important;
+
+}
+.cpgs-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cpgs-grid .store-item {
+    align-self: baseline;
+    margin-right: 0;
+}
+.cpg-card {
+    margin: 20px 5px;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.cpg-img-container
+{
+    margin-bottom: 30px;
+   
+    width: 160px;
+    height: 160px;
+    border-radius: 15px;
+    overflow: hidden;
+  
+    position: relative;
+
+   
+}
+
+
+  
+  @supports(object-fit: cover){
+    .cpg-img-container img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+.cpg-title {
+    text-align: center;
+    font-family: Poppins-SemiBold,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #332927;
+}
+.vermas{
+    cursor: pointer;
+}
+.cpg-icon-container {
+    width: 160px;
+    height: 160px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background: #fcebe9;
+   
+    i{
+        font-size: 80px;
+      
+        font-weight: 800;
+      
+        .path1:before,.path2:before,.path3:before,.path4:before{
+        color: #ff441f;
+       }
+    }
+}
+.cpg-title {
+    text-align: center;
+    font-family: Poppins-SemiBold,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #332927;
+}
+
+.container-stores, .container-stores  {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.container-stores {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 20px;
+}
+.cpg-card {
+    margin: 20px 5px;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.cpg-img-container {
+    width: 160px;
+    height: 160px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+.cpg-img-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+@media only screen and (min-width: 1281px)
+{
+.cpgs-grid {
+    justify-content: space-between;
+}
+}

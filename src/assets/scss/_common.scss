@@ -4,12 +4,19 @@
 
 /* 1. Theme default css */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:100i,200,300,300i,400,500,600,700,800,900&display=swap');
- body {
+ body,html {
 	font-family: $font_2;
 	font-weight: normal;
 	font-style: normal;
+	background-color: #fafaf8;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
 }
+::-webkit-scrollbar {
+	display: none;
+  }
+	
 h1,
 h2,
 h3,
@@ -202,39 +209,32 @@ hr {
 	display: flex;
 	align-items: center;
     justify-content: center;  
-    font-size: 30px;
-    font-weight: 400;
-    overflow: hidden;
-    border-radius: 5px;
-	background-color: rgba($color:$color-terciario, $alpha:0.9);
-	color: rgba($color: #fff, $alpha: 0.9);
-	visibility: visible;
+    font-size: 20px;
+        overflow: hidden;
+    border-radius: 50%;
+	background-color: #fff;
+		visibility: visible;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 999999;
-   	padding: 5px 25px 5px 25px;
-	transition-property:  color , background-color;
+   	transition-property:  color , background-color;
     transition-duration: 0.8s;
-    transition-delay:0.1s;
+	transition-delay:0.1s;
+	width: 42px;
+    height: 42px;
 	}
 	.owl-nav{
 		div{
 			&.owl-next{
 				right: 0px !important;
 				position: absolute;
-				i{
-					
-					top: 0px;
-				}
+				
 			}
 			&.owl-prev{
 				left: 0px;
 				position: absolute;
-				i{
-					
-					top: 0px;
-				}
+				
 			}
 		}
 	}
@@ -245,7 +245,8 @@ hr {
 				visibility: visible;
 				&:hover{
 					color: #fff;
-					background: $coloriver-1-darker;
+					background: $theme-color;
+
 				}
 			}
 		}
@@ -271,7 +272,7 @@ hr {
 		padding: 25px 5px;
 		border-radius: 4px;
 		// min-widht
-		min-width: 160px;
+		min-width: 150px;
 		cursor: pointer;
 		transition: color 0.4s linear;
 		position: relative;
@@ -279,7 +280,7 @@ hr {
 		border: 0;
 		overflow: hidden;
 		margin:0;
-
+/*
 	&::before{
 		content: "";
 		position: absolute;
@@ -296,7 +297,7 @@ hr {
 		transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
 		// 
 		transform: scaleX(0);
-	}
+	}*/
 }
 .btn:hover::before {
 	transform: scaleX(1);
@@ -443,11 +444,41 @@ hr {
 	}
 /* scrollUp */
 	#scrollUp {
-		background:$theme-color;
-		height: 50px;
-		width: 50px;
-		right: 31px;
-		bottom: 18px;
+		box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: $color-terciario;
+    border-radius: 50%;
+    bottom: 20px;
+    color: #5f6368;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 56px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    line-height: 56px;
+    min-width: 0;
+    overflow: visible;
+    position: fixed;
+    right: 20px;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: background-color,box-shadow;
+    transition-property: background-color,box-shadow;
+    -webkit-transition-timing-function: cubic-bezier(.4,0,1,1);
+    transition-timing-function: cubic-bezier(.4,0,1,1);
+    vertical-align: middle;
+    width: 56px;
+    z-index: 80;
 		@media #{$xs}{
 			right: 16px;
 		}
@@ -632,7 +663,7 @@ hr {
 		position: relative;
 		border-style: solid;
 		border-width: 3px;
-		border-top-color:$theme-color;
+		border-top-color:$color-opcion;
 		border-bottom-color: transparent;
 		border-left-color: transparent;
 		border-right-color: transparent;

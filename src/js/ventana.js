@@ -1,57 +1,27 @@
-//import {cargar_table} from './datos-table'
-var requestURL = 'assets/data/datos.json';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-
-
-var url;
-var titulopage;
-export function muestraVentana(bus, modal) {
-  var datajson = request.response;
-
-  var data = JSON.parse(JSON.stringify(datajson));
-  let buscar = bus;
-  let ven = '#' + modal;
+export function muestraVentana() {
  
-  for (let item of data) {
+ var btnGo = document.getElementById('btnModal');
+ 
+ btnGo.addEventListener("click", logFetch, false);
 
-    if (item.namePage === buscar ) {
-       url = 'page/' + item.namePage + '.html';
-      titulopage=item.Title;
-      cargarDatosVentana(url,titulopage) 
-     
+ async function logFetch() {
+   try {
+    var title=this.title;
+    var url = this.rel; 
+   fetch(url).then (Response => {
+      return Response.text();
+  }).then(
+    function (data) {
+    
+    $('#mainmodal').modal('show');
+    $(' #mainmodal > .modal-dialog > .modal-content> .modal-header > .modal-title' ).text(title)
+     document.querySelector('#mainmodal > .modal-dialog > .modal-content > .cont-modal').innerHTML =data;
     }
-  
-   
-   
-  }
- function cargarDatosVentana(url,titulopage){
-  if(buscar ==='listaprecios'){
-    $('.cont-modal').load(url, function () {
-      $(ven).modal({ show: true });
-      $(ven + " > .modal-dialog > .modal-content> .modal-header > .modal-title").text(titulopage)
-    
-      //cargar_table();
-    
-     }); 
-
-   
-  }else
-  {
-    $('.cont-modal').load(url, function () {
-      $(ven).modal({ show: true });
-      $(ven + " > .modal-dialog > .modal-content> .modal-header > .modal-title").text(titulopage)  
-    
-     });
-  }
-  
+  )
+   } catch (err) {
+     console.log('fetch failed', err.message);
+   }
+ }
+ 
  
 }
-  
- 
-
-
-}
-

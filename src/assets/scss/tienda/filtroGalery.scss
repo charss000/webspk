@@ -1,0 +1,167 @@
+  .cont-tienda{
+    .page-header {
+        display: flex;
+        align-items: unset;
+        justify-content: space-between;
+        flex-direction: column;
+        height: unset;
+        padding: 25px 25px 0;
+        h1 {
+            font-family: Poppins-SemiBold,Helvetica,Arial,sans-serif;
+            color: #332927;
+            font-size: 24px;
+            letter-spacing: normal;
+        }
+        .subtitle {
+            display: block;
+            font-family: Poppins-Regular,Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            color: #706967;
+        }
+        .desktop-container {
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            flex-direction: row;
+            .title{
+                color: #332927;
+                font-family: Poppins-Regular,Helvetica,Arial,sans-serif;
+                font-size: 16px;
+                white-space: nowrap;
+                margin-right: 16px;
+            }
+            .list-cont {
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+                flex-direction: row;
+                flex-wrap: wrap;
+                list-style: none;
+                .list {
+                    margin-right: 16px;
+                    margin-bottom: 16px;
+                    .btn {
+                        white-space: nowrap;
+                        font-family: Poppins-SemiBold,Helvetica,Arial,sans-serif;
+                        font-size: 14px;
+                        color: #332927;
+                        background-color: #fff;
+                        border-radius: 8px;
+                        padding: 0 8px;
+                        height: 32px;
+                        font-weight: 550;
+                    }
+                    .btn.outline {
+                        border: 2px solid #efece9;
+                    }
+                    .btn:hover{
+                        background-color: #332927;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+.items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,260px);
+        grid-gap: 28px 40px;
+        justify-content: center;
+     
+         .itembox{
+            height: 270px;
+            width: 270px;  
+          
+            .item-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                margin: 16px;
+              
+                .logo-container {
+                    height: 160px;
+                    width: 160px;
+                    margin: 0 auto;
+                    div {
+                        height: 100%;
+                        width: 100%;
+                        background-repeat: no-repeat;
+                        background-position: 50%;
+                        background-size: 100% auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+                }
+                .info-container {
+                    text-align: center;
+                    margin-top: 20px;
+                    flex: unset;
+                    width: unset;
+                    margin-left: unset;
+                  width: 160px;
+                 
+                    .store-name {
+                        color: #332927;
+                        padding: 10px;
+                        white-space: nowrap;
+                        font-size: 16px;
+                        overflow: hidden;
+                     text-overflow: ellipsis;
+                     white-space: nowrap;
+                     font-weight: 600;
+                  
+                    }
+                    .store-group {
+                        font-family: Poppins-Regular,Helvetica,Arial,sans-serif;
+                        color: #706967;
+                        font-size: 12px;
+                        font-weight: 600;
+                       
+                    }
+                    
+                }
+            }
+            
+        }
+        .eta-container {
+                   
+         display: none;
+               position: relative;
+               top: 0px;
+               right: 0;
+               left: 0;
+               border-radius: 8px;
+               border: 2px solid #efece9;
+               background-color: #fff;
+               margin: 0 20px;
+               height: 32px;
+               text-align: center;
+                color: #706967;
+               font-family: Poppins-Regular,Helvetica,Arial,sans-serif;
+               font-size: 14px;
+              i{
+                  margin-right: 5px;
+              }
+           }
+        .itembox:hover {
+            box-shadow: 0 6px 10px 0 rgba(128,98,96,.16);
+                       border-radius: 10px;
+        }  
+        .itembox:hover .eta-container{
+           display: block;
+          transform: translateY(-400%);
+        }
+        
+    }
+    
+    .mobile-container{
+        display: none;
+    }
+.arrow-container{
+    display: none;
+}
+  }
+  
